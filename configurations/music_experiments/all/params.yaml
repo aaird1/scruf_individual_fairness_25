@@ -1,0 +1,12 @@
+config:
+  choice: ['weighted_scoring'] #'weighted_scoring'
+  allocation: ['least_fair', 'product_lottery', 'weighted_product_allocation'] #, 'product_lottery', 'weighted_product_allocation'
+  rec_weight: [0.6, 0.7, 0.8, 1.0, 1.1, 1.4, 1.8, 3]
+  folder_path: "./" 
+  base_toml: "all.toml"
+# config:
+#   choice: ['RuleBorda', 'RuleCopeland']
+#   allocation: ['least_fair', 'product_lottery', 'weighted_product_allocation']
+#   rec_weight: [0.9, 1.0, 1.1, 1.2]
+#   folder_path: "./" #change here for new data
+#   base_toml: "all.toml" 

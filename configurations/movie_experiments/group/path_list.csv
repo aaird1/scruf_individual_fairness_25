@@ -1,0 +1,7 @@
+Config Number,Config Path,Output Path,Recommender Weight,Agent Deltas
+1,.//movie_group_weighted_scoring_weighted_product_allocation_0.01_.toml,c_movie_group_weighted_scoring_weighted_product_allocation_0.01_.json,0.01,{}
+2,.//movie_group_weighted_scoring_weighted_product_allocation_0.2_.toml,c_movie_group_weighted_scoring_weighted_product_allocation_0.2_.json,0.2,{}
+3,.//movie_group_weighted_scoring_weighted_product_allocation_0.4_.toml,c_movie_group_weighted_scoring_weighted_product_allocation_0.4_.json,0.4,{}
+4,.//movie_group_weighted_scoring_weighted_product_allocation_0.6_.toml,c_movie_group_weighted_scoring_weighted_product_allocation_0.6_.json,0.6,{}
+5,.//movie_group_weighted_scoring_weighted_product_allocation_0.8_.toml,c_movie_group_weighted_scoring_weighted_product_allocation_0.8_.json,0.8,{}
+6,.//movie_group_weighted_scoring_weighted_product_allocation_1.0_.toml,c_movie_group_weighted_scoring_weighted_product_allocation_1.0_.json,1.0,{}

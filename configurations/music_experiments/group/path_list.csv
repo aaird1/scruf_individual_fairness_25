@@ -1,0 +1,19 @@
+Config Number,Config Path,Output Path,Recommender Weight,Agent Deltas
+1,.//group_weighted_scoring_least_fair_0.01_.toml,c_ambar_group.csv_weighted_scoring_least_fair_0.01_.json,0.01,{}
+2,.//group_weighted_scoring_least_fair_0.2_.toml,c_ambar_group.csv_weighted_scoring_least_fair_0.2_.json,0.2,{}
+3,.//group_weighted_scoring_least_fair_0.4_.toml,c_ambar_group.csv_weighted_scoring_least_fair_0.4_.json,0.4,{}
+4,.//group_weighted_scoring_least_fair_0.6_.toml,c_ambar_group.csv_weighted_scoring_least_fair_0.6_.json,0.6,{}
+5,.//group_weighted_scoring_least_fair_0.7_.toml,c_ambar_group.csv_weighted_scoring_least_fair_0.7_.json,0.7,{}
+6,.//group_weighted_scoring_least_fair_1.0_.toml,c_ambar_group.csv_weighted_scoring_least_fair_1.0_.json,1.0,{}
+7,.//group_weighted_scoring_product_lottery_0.01_.toml,c_ambar_group.csv_weighted_scoring_product_lottery_0.01_.json,0.01,{}
+8,.//group_weighted_scoring_product_lottery_0.2_.toml,c_ambar_group.csv_weighted_scoring_product_lottery_0.2_.json,0.2,{}
+9,.//group_weighted_scoring_product_lottery_0.4_.toml,c_ambar_group.csv_weighted_scoring_product_lottery_0.4_.json,0.4,{}
+10,.//group_weighted_scoring_product_lottery_0.6_.toml,c_ambar_group.csv_weighted_scoring_product_lottery_0.6_.json,0.6,{}
+11,.//group_weighted_scoring_product_lottery_0.7_.toml,c_ambar_group.csv_weighted_scoring_product_lottery_0.7_.json,0.7,{}
+12,.//group_weighted_scoring_product_lottery_1.0_.toml,c_ambar_group.csv_weighted_scoring_product_lottery_1.0_.json,1.0,{}
+13,.//group_weighted_scoring_weighted_product_allocation_0.01_.toml,c_ambar_group.csv_weighted_scoring_weighted_product_allocation_0.01_.json,0.01,{}
+14,.//group_weighted_scoring_weighted_product_allocation_0.2_.toml,c_ambar_group.csv_weighted_scoring_weighted_product_allocation_0.2_.json,0.2,{}
+15,.//group_weighted_scoring_weighted_product_allocation_0.4_.toml,c_ambar_group.csv_weighted_scoring_weighted_product_allocation_0.4_.json,0.4,{}
+16,.//group_weighted_scoring_weighted_product_allocation_0.6_.toml,c_ambar_group.csv_weighted_scoring_weighted_product_allocation_0.6_.json,0.6,{}
+17,.//group_weighted_scoring_weighted_product_allocation_0.7_.toml,c_ambar_group.csv_weighted_scoring_weighted_product_allocation_0.7_.json,0.7,{}
+18,.//group_weighted_scoring_weighted_product_allocation_1.0_.toml,c_ambar_group.csv_weighted_scoring_weighted_product_allocation_1.0_.json,1.0,{}

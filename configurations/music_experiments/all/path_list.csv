@@ -1,0 +1,25 @@
+Config Number,Config Path,Output Path,Recommender Weight,Agent Deltas
+1,.//all_weighted_scoring_least_fair_0.6_.toml,c_ambar_all_weighted_scoring_least_fair_0.6_.json,0.6,{}
+2,.//all_weighted_scoring_least_fair_0.7_.toml,c_ambar_all_weighted_scoring_least_fair_0.7_.json,0.7,{}
+3,.//all_weighted_scoring_least_fair_0.8_.toml,c_ambar_all_weighted_scoring_least_fair_0.8_.json,0.8,{}
+4,.//all_weighted_scoring_least_fair_1.0_.toml,c_ambar_all_weighted_scoring_least_fair_1.0_.json,1.0,{}
+5,.//all_weighted_scoring_least_fair_1.1_.toml,c_ambar_all_weighted_scoring_least_fair_1.1_.json,1.1,{}
+6,.//all_weighted_scoring_least_fair_1.4_.toml,c_ambar_all_weighted_scoring_least_fair_1.4_.json,1.4,{}
+7,.//all_weighted_scoring_least_fair_1.8_.toml,c_ambar_all_weighted_scoring_least_fair_1.8_.json,1.8,{}
+8,.//all_weighted_scoring_least_fair_3.0_.toml,c_ambar_all_weighted_scoring_least_fair_3.0_.json,3.0,{}
+9,.//all_weighted_scoring_product_lottery_0.6_.toml,c_ambar_all_weighted_scoring_product_lottery_0.6_.json,0.6,{}
+10,.//all_weighted_scoring_product_lottery_0.7_.toml,c_ambar_all_weighted_scoring_product_lottery_0.7_.json,0.7,{}
+11,.//all_weighted_scoring_product_lottery_0.8_.toml,c_ambar_all_weighted_scoring_product_lottery_0.8_.json,0.8,{}
+12,.//all_weighted_scoring_product_lottery_1.0_.toml,c_ambar_all_weighted_scoring_product_lottery_1.0_.json,1.0,{}
+13,.//all_weighted_scoring_product_lottery_1.1_.toml,c_ambar_all_weighted_scoring_product_lottery_1.1_.json,1.1,{}
+14,.//all_weighted_scoring_product_lottery_1.4_.toml,c_ambar_all_weighted_scoring_product_lottery_1.4_.json,1.4,{}
+15,.//all_weighted_scoring_product_lottery_1.8_.toml,c_ambar_all_weighted_scoring_product_lottery_1.8_.json,1.8,{}
+16,.//all_weighted_scoring_product_lottery_3.0_.toml,c_ambar_all_weighted_scoring_product_lottery_3.0_.json,3.0,{}
+17,.//all_weighted_scoring_weighted_product_allocation_0.6_.toml,c_ambar_all_weighted_scoring_weighted_product_allocation_0.6_.json,0.6,{}
+18,.//all_weighted_scoring_weighted_product_allocation_0.7_.toml,c_ambar_all_weighted_scoring_weighted_product_allocation_0.7_.json,0.7,{}
+19,.//all_weighted_scoring_weighted_product_allocation_0.8_.toml,c_ambar_all_weighted_scoring_weighted_product_allocation_0.8_.json,0.8,{}
+20,.//all_weighted_scoring_weighted_product_allocation_1.0_.toml,c_ambar_all_weighted_scoring_weighted_product_allocation_1.0_.json,1.0,{}
+21,.//all_weighted_scoring_weighted_product_allocation_1.1_.toml,c_ambar_all_weighted_scoring_weighted_product_allocation_1.1_.json,1.1,{}
+22,.//all_weighted_scoring_weighted_product_allocation_1.4_.toml,c_ambar_all_weighted_scoring_weighted_product_allocation_1.4_.json,1.4,{}
+23,.//all_weighted_scoring_weighted_product_allocation_1.8_.toml,c_ambar_all_weighted_scoring_weighted_product_allocation_1.8_.json,1.8,{}
+24,.//all_weighted_scoring_weighted_product_allocation_3.0_.toml,c_ambar_all_weighted_scoring_weighted_product_allocation_3.0_.json,3.0,{}

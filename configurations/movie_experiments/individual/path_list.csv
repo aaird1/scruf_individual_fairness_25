@@ -1,0 +1,25 @@
+Config Number,Config Path,Output Path,Recommender Weight,Agent Deltas
+1,.//movie_individual_weighted_scoring_least_fair_0.5_.toml,c_movie_individual_weighted_scoring_least_fair_0.5_.json,0.5,{}
+2,.//movie_individual_weighted_scoring_least_fair_0.7_.toml,c_movie_individual_weighted_scoring_least_fair_0.7_.json,0.7,{}
+3,.//movie_individual_weighted_scoring_least_fair_1.0_.toml,c_movie_individual_weighted_scoring_least_fair_1.0_.json,1.0,{}
+4,.//movie_individual_weighted_scoring_least_fair_1.2_.toml,c_movie_individual_weighted_scoring_least_fair_1.2_.json,1.2,{}
+5,.//movie_individual_weighted_scoring_least_fair_1.4_.toml,c_movie_individual_weighted_scoring_least_fair_1.4_.json,1.4,{}
+6,.//movie_individual_weighted_scoring_least_fair_2.0_.toml,c_movie_individual_weighted_scoring_least_fair_2.0_.json,2.0,{}
+7,.//movie_individual_weighted_scoring_least_fair_5.0_.toml,c_movie_individual_weighted_scoring_least_fair_5.0_.json,5.0,{}
+8,.//movie_individual_weighted_scoring_least_fair_7.0_.toml,c_movie_individual_weighted_scoring_least_fair_7.0_.json,7.0,{}
+9,.//movie_individual_weighted_scoring_product_lottery_0.5_.toml,c_movie_individual_weighted_scoring_product_lottery_0.5_.json,0.5,{}
+10,.//movie_individual_weighted_scoring_product_lottery_0.7_.toml,c_movie_individual_weighted_scoring_product_lottery_0.7_.json,0.7,{}
+11,.//movie_individual_weighted_scoring_product_lottery_1.0_.toml,c_movie_individual_weighted_scoring_product_lottery_1.0_.json,1.0,{}
+12,.//movie_individual_weighted_scoring_product_lottery_1.2_.toml,c_movie_individual_weighted_scoring_product_lottery_1.2_.json,1.2,{}
+13,.//movie_individual_weighted_scoring_product_lottery_1.4_.toml,c_movie_individual_weighted_scoring_product_lottery_1.4_.json,1.4,{}
+14,.//movie_individual_weighted_scoring_product_lottery_2.0_.toml,c_movie_individual_weighted_scoring_product_lottery_2.0_.json,2.0,{}
+15,.//movie_individual_weighted_scoring_product_lottery_5.0_.toml,c_movie_individual_weighted_scoring_product_lottery_5.0_.json,5.0,{}
+16,.//movie_individual_weighted_scoring_product_lottery_7.0_.toml,c_movie_individual_weighted_scoring_product_lottery_7.0_.json,7.0,{}
+17,.//movie_individual_weighted_scoring_weighted_product_allocation_0.5_.toml,c_movie_individual_weighted_scoring_weighted_product_allocation_0.5_.json,0.5,{}
+18,.//movie_individual_weighted_scoring_weighted_product_allocation_0.7_.toml,c_movie_individual_weighted_scoring_weighted_product_allocation_0.7_.json,0.7,{}
+19,.//movie_individual_weighted_scoring_weighted_product_allocation_1.0_.toml,c_movie_individual_weighted_scoring_weighted_product_allocation_1.0_.json,1.0,{}
+20,.//movie_individual_weighted_scoring_weighted_product_allocation_1.2_.toml,c_movie_individual_weighted_scoring_weighted_product_allocation_1.2_.json,1.2,{}
+21,.//movie_individual_weighted_scoring_weighted_product_allocation_1.4_.toml,c_movie_individual_weighted_scoring_weighted_product_allocation_1.4_.json,1.4,{}
+22,.//movie_individual_weighted_scoring_weighted_product_allocation_2.0_.toml,c_movie_individual_weighted_scoring_weighted_product_allocation_2.0_.json,2.0,{}
+23,.//movie_individual_weighted_scoring_weighted_product_allocation_5.0_.toml,c_movie_individual_weighted_scoring_weighted_product_allocation_5.0_.json,5.0,{}
+24,.//movie_individual_weighted_scoring_weighted_product_allocation_7.0_.toml,c_movie_individual_weighted_scoring_weighted_product_allocation_7.0_.json,7.0,{}

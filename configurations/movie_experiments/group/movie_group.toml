@@ -1,0 +1,97 @@
+[location]
+path = "../data"
+overwrite = "true"
+
+[data]
+rec_filename = "recs_1m.csv"
+feature_filename = "items.csv"
+
+[output]
+filename = "c_movie_group"
+dnc = "true"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 200
+
+[context]
+context_class = "csv_context"
+
+[choice]
+choice_class = "weighted_scoring"
+
+[post]
+postprocess_class = "null"
+
+[context.properties]
+compatibility_file = "compat_1m_tail.csv"
+popularity_data = "popularity_1m.csv"
+
+#[feature.one]
+#name = "tail"
+#protected_feature = "tail"
+#protected_values = [ 1,]
+
+[feature.two]
+name = "non-en"
+protected_feature = "non-en"
+protected_values = [ 1,]
+
+[feature.three]
+name = "women_writer_director"
+protected_feature = "women_writer_director"
+protected_values = [ 1,]
+
+#[agent.one]
+#name = "tail"
+#metric_class = "gini"
+#compatibility_class = "context_compatibility"
+#preference_function_class = "individual_preference"
+
+[agent.two]
+name = "non-en"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[agent.three]
+name = "women_writer_director"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[allocation]
+allocation_class = "weighted_product_allocation"
+
+[allocation.properties]
+
+
+[choice.properties]
+recommender_weight = 0.1
+
+
+#[agent.one.metric]
+#target = 0.35
+#num_items = 2753
+
+#[agent.one.preference]
+#delta = 0.4
+
+
+[agent.two.metric]
+feature = "non-en"
+proportion = 0.07
+
+[agent.two.preference]
+delta = 3
+feature = "non-en"
+
+[agent.three.metric]
+feature = "women_writer_director"
+proportion = 0.30
+
+[agent.three.preference]
+delta = 0.5
+feature = "women_writer_director"

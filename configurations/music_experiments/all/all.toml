@@ -1,0 +1,80 @@
+[location]
+path = "../data"
+overwrite = "true"
+
+[data]
+rec_filename = "ambar_recs1.csv"
+feature_filename = "ambar_items.csv"
+
+[output]
+filename = "c_ambar_all"
+dnc = "true"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 500
+
+[context]
+context_class = "csv_context"
+
+[choice]
+choice_class = "weighted_scoring"
+
+[post]
+postprocess_class = "null"
+
+[context.properties]
+compatibility_file = "ambar_compat_tail.csv"
+popularity_data = "popularity_ambar.csv"
+
+[feature.one]
+name = "tail"
+protected_feature = "tail"
+protected_values = [ 1,]
+
+[feature.two]
+name = "female"
+protected_feature = "female"
+protected_values = [ 1,]
+
+
+[agent.one]
+name = "tail"
+metric_class = "gini"
+compatibility_class = "context_compatibility"
+preference_function_class = "ind_exponential"
+
+[agent.two]
+name = "female"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+
+[allocation]
+allocation_class = "weighted_product_allocation"
+
+[allocation.properties]
+
+
+[choice.properties]
+recommender_weight = 0.1
+
+
+[agent.one.metric]
+target = 0.65
+num_items = 35093
+
+[agent.one.preference]
+delta = 30
+
+
+[agent.two.metric]
+feature = "female"
+proportion = 0.25
+
+[agent.two.preference]
+delta = 5
+feature = "female"

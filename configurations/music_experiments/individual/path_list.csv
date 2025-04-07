@@ -1,0 +1,25 @@
+Config Number,Config Path,Output Path,Recommender Weight,Agent Deltas
+1,.//individual_weighted_scoring_least_fair_0.6_.toml,c_ambar_individual_weighted_scoring_least_fair_0.6_.json,0.6,{}
+2,.//individual_weighted_scoring_least_fair_0.7_.toml,c_ambar_individual_weighted_scoring_least_fair_0.7_.json,0.7,{}
+3,.//individual_weighted_scoring_least_fair_0.8_.toml,c_ambar_individual_weighted_scoring_least_fair_0.8_.json,0.8,{}
+4,.//individual_weighted_scoring_least_fair_1.0_.toml,c_ambar_individual_weighted_scoring_least_fair_1.0_.json,1.0,{}
+5,.//individual_weighted_scoring_least_fair_1.1_.toml,c_ambar_individual_weighted_scoring_least_fair_1.1_.json,1.1,{}
+6,.//individual_weighted_scoring_least_fair_1.4_.toml,c_ambar_individual_weighted_scoring_least_fair_1.4_.json,1.4,{}
+7,.//individual_weighted_scoring_least_fair_1.8_.toml,c_ambar_individual_weighted_scoring_least_fair_1.8_.json,1.8,{}
+8,.//individual_weighted_scoring_least_fair_3.0_.toml,c_ambar_individual_weighted_scoring_least_fair_3.0_.json,3.0,{}
+9,.//individual_weighted_scoring_product_lottery_0.6_.toml,c_ambar_individual_weighted_scoring_product_lottery_0.6_.json,0.6,{}
+10,.//individual_weighted_scoring_product_lottery_0.7_.toml,c_ambar_individual_weighted_scoring_product_lottery_0.7_.json,0.7,{}
+11,.//individual_weighted_scoring_product_lottery_0.8_.toml,c_ambar_individual_weighted_scoring_product_lottery_0.8_.json,0.8,{}
+12,.//individual_weighted_scoring_product_lottery_1.0_.toml,c_ambar_individual_weighted_scoring_product_lottery_1.0_.json,1.0,{}
+13,.//individual_weighted_scoring_product_lottery_1.1_.toml,c_ambar_individual_weighted_scoring_product_lottery_1.1_.json,1.1,{}
+14,.//individual_weighted_scoring_product_lottery_1.4_.toml,c_ambar_individual_weighted_scoring_product_lottery_1.4_.json,1.4,{}
+15,.//individual_weighted_scoring_product_lottery_1.8_.toml,c_ambar_individual_weighted_scoring_product_lottery_1.8_.json,1.8,{}
+16,.//individual_weighted_scoring_product_lottery_3.0_.toml,c_ambar_individual_weighted_scoring_product_lottery_3.0_.json,3.0,{}
+17,.//individual_weighted_scoring_weighted_product_allocation_0.6_.toml,c_ambar_individual_weighted_scoring_weighted_product_allocation_0.6_.json,0.6,{}
+18,.//individual_weighted_scoring_weighted_product_allocation_0.7_.toml,c_ambar_individual_weighted_scoring_weighted_product_allocation_0.7_.json,0.7,{}
+19,.//individual_weighted_scoring_weighted_product_allocation_0.8_.toml,c_ambar_individual_weighted_scoring_weighted_product_allocation_0.8_.json,0.8,{}
+20,.//individual_weighted_scoring_weighted_product_allocation_1.0_.toml,c_ambar_individual_weighted_scoring_weighted_product_allocation_1.0_.json,1.0,{}
+21,.//individual_weighted_scoring_weighted_product_allocation_1.1_.toml,c_ambar_individual_weighted_scoring_weighted_product_allocation_1.1_.json,1.1,{}
+22,.//individual_weighted_scoring_weighted_product_allocation_1.4_.toml,c_ambar_individual_weighted_scoring_weighted_product_allocation_1.4_.json,1.4,{}
+23,.//individual_weighted_scoring_weighted_product_allocation_1.8_.toml,c_ambar_individual_weighted_scoring_weighted_product_allocation_1.8_.json,1.8,{}
+24,.//individual_weighted_scoring_weighted_product_allocation_3.0_.toml,c_ambar_individual_weighted_scoring_weighted_product_allocation_3.0_.json,3.0,{}

@@ -1,0 +1,6 @@
+Config Number,Config Path,Output Path,Recommender Weight,Agent Deltas
+1,.//movie_all_weighted_scoring_least_fair_2.0_.toml,c_movie_all_weighted_scoring_least_fair_2.0_.json,2.0,{}
+2,.//movie_all_weighted_scoring_least_fair_4.0_.toml,c_movie_all_weighted_scoring_least_fair_4.0_.json,4.0,{}
+3,.//movie_all_weighted_scoring_least_fair_5.0_.toml,c_movie_all_weighted_scoring_least_fair_5.0_.json,5.0,{}
+4,.//movie_all_weighted_scoring_least_fair_7.0_.toml,c_movie_all_weighted_scoring_least_fair_7.0_.json,7.0,{}
+5,.//movie_all_weighted_scoring_least_fair_9.0_.toml,c_movie_all_weighted_scoring_least_fair_9.0_.json,9.0,{}
