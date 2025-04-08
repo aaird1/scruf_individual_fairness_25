@@ -2,6 +2,7 @@ import os
 import json
 import csv
 import statistics
+import pandas as pd
 
 # Define the directory containing the JSON files
 json_directory = "data/rec_weights_movies/"  # Replace with your JSON files directory
