@@ -1,6 +1,3 @@
-Here’s your content rewritten in clean, organized Markdown format:
-
-```markdown
 # Integrating Individual and Group Fairness for Recommender Systems through Social Choice
 
 ## SCRUF-D
