@@ -1,4 +1,5 @@
 import os
+import sys
 import subprocess
 from pathlib import Path
 import csv
@@ -12,7 +13,7 @@ script = "post_processor_movie.py"
 for file_path in directory.glob("*.parquet"):
     if file_path.is_file():
         print(f"Processing {file_path}...")
-        subprocess.run(["python3", script, str(file_path), "-c"])
+        subprocess.run([sys.executable, script, str(file_path), "-c"])
 
 
 json_directory = "data/movies/"  

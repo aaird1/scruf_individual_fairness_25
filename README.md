@@ -53,7 +53,7 @@ This repository contains an implementation of the SCRUF-D architecture, based on
 2. From that directory, execute the main experiment script:
 
    ```bash
-   ../../../scruf_d/__main__recsys_25.py
+   python ../../../scruf_d/__main__recsys_25.py
    ```
 
    For example, if you're in:
@@ -65,7 +65,7 @@ This repository contains an implementation of the SCRUF-D architecture, based on
    Run:
 
    ```bash
-   ../../../scruf_d/__main__recsys_25.py
+   python ../../../scruf_d/__main__recsys_25.py
    ```
 
    This will generate multiple `.toml` files and execute the experiment with different configurations.
