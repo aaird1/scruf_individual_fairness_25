@@ -61,10 +61,22 @@ def generate_config(base, config_number, rec_weight, choice, allocation, agent_d
 
     # Format deltas into filename
     delta_str = format_agent_deltas(agent_delta_config)
+    
+    choice2 = choice
+    if choice == "weighted_scoring":
+        choice2 = "Rescore"
+
+    allocation2 = allocation
+    if allocation == "weighted_product_allocation":
+        allocation2 = "Product"
+    if allocation == "product_lottery":
+        allocation2 = "lottery"
+    if allocation == "least_fair":
+        allocation2 = "leastFair"
 
     # Modify output filenames with deltas
     base_filename = remove_suffix(base_toml["output"]["filename"], ".json")
-    new_filename = f"{base_filename}_{choice}_{allocation}_{rec_weight}_{delta_str}.json"
+    new_filename = f"{base_filename}_{choice2}_{allocation2}_{rec_weight}_{delta_str}.json"
     base_toml["output"]["filename"] = new_filename
 
     # Set choice properties
@@ -85,7 +97,7 @@ def generate_config(base, config_number, rec_weight, choice, allocation, agent_d
     base_toml["choice"]["properties"]["recommender_weight"] = rec_weight
 
     # Generate config filename with deltas
-    config_name = f"{folder_path}/{remove_suffix(base.split('/')[-1], '.toml')}_{choice}_{allocation}_{rec_weight}_{delta_str}.toml"
+    config_name = f"{folder_path}/{remove_suffix(base.split('/')[-1], '.toml')}_{choice2}_{allocation2}_{rec_weight}_{delta_str}.toml"
     
     # Save the modified TOML file
     with open(config_name, 'w') as f:
@@ -97,8 +109,7 @@ def generate_config(base, config_number, rec_weight, choice, allocation, agent_d
 config_number_counter = 0
 path_list = []
 agent_combinations = generate_agent_combinations()
-print(agent_combinations)
-print("Extracted Agent Deltas:", agent_deltas)
+
 
 for choice in choices:
     for allocation in allocations:
@@ -118,4 +129,6 @@ for choice in choices:
 # Save the generated configuration paths
 config_df = pd.DataFrame(path_list, columns=['Config Number', 'Config Path', 'Output Path', 'Recommender Weight', 'Agent Deltas'])
 config_df.to_csv(f"{folder_path}/path_list.csv", index=False)
+
+
 

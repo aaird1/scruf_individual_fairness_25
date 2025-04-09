@@ -47,7 +47,9 @@ This repository contains an implementation of the SCRUF-D architecture, based on
 
 ## Running the Experiment
 
-1. Navigate to the configuration folder for the experiment you want to run.
+1. Navigate to the configuration folder for the experiment you want to run.  ```bash params.yaml``` can be used to set choice and allocation mechanisms along with recommender weights for the experiments you want to run. 
+ - choice options include: 'weighted_scoring', 'RuleBorda', 'RuleCopeland'
+ - allocation options include: 'least_fair', 'product_lottery', 'weighted_product_allocation'
 2. From that directory, execute the main experiment script:
 
    ```bash
@@ -73,15 +75,18 @@ This repository contains an implementation of the SCRUF-D architecture, based on
 ## Post-Processing
 
 1. Navigate to the `post_processing/` directory.
-2. Run one of the following scripts based on your dataset:
+2. Run the following to compile the C library
+   ```bash
+   clang -shared -fPIC -o metrics.so metrics.c
+   ```
+3. Run one of the following scripts based on your dataset:
 
    ```bash
-   ./run_movie_experiments.sh
-   ./run_music_experiments.sh
+   python run_movie_experiments.py
+   python run_music_experiments.py
    ```
 
    Ensure the `data/` folder is updated appropriately.
 
-3. Once completed, you can run the `rec_weight_tuning` notebook to generate new CSVs.
-4. Use the final output CSVs with the `output visualization` notebook to produce plots and visual results.
+4. Once completed, you can run the `output_viz` notebook to generate new CSVs.
 ```

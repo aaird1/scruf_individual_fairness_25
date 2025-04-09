@@ -7,9 +7,9 @@ import os
 import rbo 
 
 # dataset-dependent params
-RECS_FILENAME = "data/datasets/ambar_recs2.csv"
-RATINGS_FILENAME = "data/datasets/ratings_info.csv"
-ITEMS_FILENAME = "data/datasets/ambar_items.csv"
+RECS_FILENAME = "data/music/ambar_recs1.csv"
+RATINGS_FILENAME = "data/music/ratings_info.csv"
+ITEMS_FILENAME = "data/music/ambar_items.csv"
 ITEM_FEATURES = ["female"]
 FAIRNESS_TARGETS = [0.25]
 SCORE_SORT_VALUE = True
@@ -58,10 +58,10 @@ if __name__ == "__main__":
     # TODO: janky fix, import properly
     recommender_ids = [int(id) for id in recommender_ids]
 
-    gini = mw.gini_wrapper(recommender_ids)
-    gini = (1-gini)/0.5
+    # gini = mw.gini_wrapper(recommender_ids)
+    # gini = (1-gini)/0.5
 
-    print(gini)
+    # print(gini)
 
     coverage = ((len(set(recommender_ids)))/num_items)/(coverage_target)
     total_items = 0
@@ -145,12 +145,7 @@ if __name__ == "__main__":
     print(np.mean(ndcg_scores))
 
 metrics_data = {
-        # "dataset": dataset,
-        # "agents": agents,
-        # "allocation": allocation,
-        # "choice": choice,
-        #"fold": fold,
-        "gini": gini,
+
         "mean_ndcg": mean_ndcg,
         "proportional_fairness": proportional_fairness,
         "rbo": mean_rbo,

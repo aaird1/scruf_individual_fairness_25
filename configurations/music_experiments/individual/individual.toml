@@ -1,5 +1,5 @@
 [location]
-path = "../data"
+path = "../../../post_processing/data/music/"
 overwrite = "true"
 
 [data]
@@ -7,7 +7,7 @@ rec_filename = "ambar_recs1.csv"
 feature_filename = "ambar_items.csv"
 
 [output]
-filename = "c_ambar_individual"
+filename = "ambar_individual"
 dnc = "true"
 
 [parameters]

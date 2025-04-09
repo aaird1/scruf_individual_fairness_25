@@ -7,9 +7,9 @@ import os
 import rbo 
 
 # dataset-dependent params
-RECS_FILENAME = "data/datasets/recs_1m.csv"
-RATINGS_FILENAME = "data/datasets/ratings_1m.csv"
-ITEMS_FILENAME = "data/datasets/movie_features_1m.csv"
+RECS_FILENAME = "data/movies/recs_1m.csv"
+RATINGS_FILENAME = "data/movies/ratings_1m.csv"
+ITEMS_FILENAME = "data/movies/movie_features_1m.csv"
 ITEM_FEATURES = ["women_writer_director", "non-en"]
 FAIRNESS_TARGETS = [1.0]
 SCORE_SORT_VALUE = True
@@ -58,10 +58,10 @@ if __name__ == "__main__":
     # TODO: janky fix, import properly
     recommender_ids = [int(id) for id in recommender_ids]
 
-    gini = mw.gini_wrapper(recommender_ids)
-    gini = (1-gini)/0.5
+    # gini = mw.gini_wrapper(recommender_ids)
+    # gini = (1-gini)/0.5
 
-    print(gini)
+    # print(gini)
 
     coverage = ((len(set(recommender_ids)))/num_items)/(coverage_target)
     total_items = 0
@@ -95,14 +95,11 @@ if __name__ == "__main__":
     rbo_scores = []
     user_ids = []
     for user in history['user'].unique():
-        #print(type(user), type())
         history_view = history[history['user'] == user]
-        # TODO: fix later for updated SCRUF
         out_view = history_view[history_view['type'] == ' output']
         in_view = history_view[history_view['type'] == '__rec']
 
         user_ids.append(user)
-        #TODO: fix janky typeçccasting
         user_ratings = ratings_file[ratings_file['user_id'] == int(user)]
         obs_ids = user_ratings['item_id'].tolist()
         obs_scores = user_ratings['rating'].tolist()
@@ -122,12 +119,11 @@ if __name__ == "__main__":
         lowest_item = -1
         for element in reversed(original):
             if element in reranked:
-                # Find the index of the first occurrence of `element` in `original`
                 try:
                     lowest_item = (next(i for i, val in enumerate(original) if val == element)+1)
                 except StopIteration:
-                    lowest_item = -1  # Default to -1 if `element` is not found
-                break  # Exit the loop once we find the first match
+                    lowest_item = -1  
+                break  
         n_lowest = (lowest_item-10)/(50-10)
         normalized_lp.append(n_lowest)
 
@@ -146,13 +142,7 @@ if __name__ == "__main__":
     print(np.mean(ndcg_scores))
 
 metrics_data = {
-        # "dataset": dataset,
-        # "agents": agents,
-        # "allocation": allocation,
-        # "choice": choice,
-        #"fold": fold,
-        "gini": gini,
-        #"user": user_ids,
+
         "mean_ndcg": ndcg_scores,
         "proportional_fairness": proportional_fairness,
         "rbo": rbo_scores,
@@ -164,14 +154,3 @@ json_filename = os.path.join("results", os.path.splitext(history_csv)[0] + ".jso
 json_filename = os.path.splitext(history_csv)[0] + ".json"
 with open(json_filename, 'w') as json_file:
     json.dump(metrics_data, json_file, indent=4)
-#csv_filename = os.path.join("results", os.path.splitext(history_csv)[0] + ".csv")
-
-# Convert metrics_data to a DataFrame
-# metrics_df = pd.DataFrame({
-#     "user": user_ids,
-#     "mean_ndcg": ndcg_scores,
-#     "rbo": rbo_scores
-# })
-
-# # Save to CSV
-# metrics_df.to_csv(csv_filename, index=False)

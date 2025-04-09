@@ -1,6 +1,6 @@
 config:
   choice: ['weighted_scoring'] #'weighted_scoring'
   allocation: ['weighted_product_allocation'] #, 'product_lottery', 'weighted_product_allocation'
-  rec_weight: [0.01, 0.2, 0.4, 0.6, 0.8, 1.0]
+  rec_weight: [0.01, 0.2]
   folder_path: "./" 
   base_toml: "movie_group.toml" #change here for new agent definitions/data

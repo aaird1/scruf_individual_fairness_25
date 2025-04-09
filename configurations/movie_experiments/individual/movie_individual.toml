@@ -7,7 +7,7 @@ rec_filename = "recs_1m.csv"
 feature_filename = "items.csv"
 
 [output]
-filename = "c_movie_individual"
+filename = "movie_individual"
 dnc = "true"
 
 [parameters]
