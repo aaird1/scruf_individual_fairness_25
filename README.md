@@ -47,7 +47,7 @@ This repository contains an implementation of the SCRUF-D architecture, based on
 
 ## Running the Experiment
 
-1. Navigate to the configuration folder for the experiment you want to run.  ```bash params.yaml``` can be used to set choice and allocation mechanisms along with recommender weights for the experiments you want to run. 
+1. Navigate to the configuration folder for the experiment you want to run.  `params.yaml` can be used to set choice and allocation mechanisms along with recommender weights for the experiments you want to run. 
  - choice options include: 'weighted_scoring', 'RuleBorda', 'RuleCopeland'
  - allocation options include: 'least_fair', 'product_lottery', 'weighted_product_allocation'
 2. From that directory, execute the main experiment script:
