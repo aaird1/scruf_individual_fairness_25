@@ -88,5 +88,5 @@ This repository contains an implementation of the SCRUF-D architecture, based on
 
    Ensure the `data/` folder is updated appropriately.
 
-4. Once completed, you can run the `output_viz` notebook to generate new CSVs.
+4. Once completed, you can run the `output_viz` notebook to generate CSVs of results and visuals.
 ```
