@@ -3,11 +3,11 @@ path = "../../../post_processing/data/music/"
 overwrite = "true"
 
 [data]
-rec_filename = "ambar_recs1.csv"
+rec_filename = "ambar_fold1_MultiVAE_test_recommendations.csv"
 feature_filename = "ambar_items.csv"
 
 [output]
-filename = "ambar_group.csv"
+filename = "ambar_fold1_MultiVAE_group.csv"
 dnc = "true"
 
 [parameters]
@@ -76,7 +76,7 @@ recommender_weight = 0.1
 
 [agent.two.metric]
 feature = "female"
-proportion = 0.25
+proportion = 0.50
 
 [agent.two.preference]
 delta = 50

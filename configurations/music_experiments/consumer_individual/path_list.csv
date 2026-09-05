@@ -1,0 +1,3 @@
+,Config Number,Config Path,Output Path,recommender_weight,fold
+0,1,.//VAE_weighted_scoring_product_lottery_0.08_fold1.toml,ambar_fold1_VAE_individual.csv_weighted_scoring_product_lottery_0.08_fold1.json,0.08,1
+1,2,.//VAE_weighted_scoring_weighted_product_allocation_0.08_fold1.toml,ambar_fold1_VAE_individual.csv_weighted_scoring_weighted_product_allocation_0.08_fold1.json,0.08,1

@@ -1,0 +1,28 @@
+# Dataset definition for the MovieLens (movies) post-processing runs.
+# To add a new dataset, copy this file, point it at your own data files,
+# and list the protected features you want proportional fairness on.
+
+[dataset]
+name = "movies"
+data_dir = "data/movies"
+recs_filename = "ml-1m_{fold}_{model}_test_recommendations.csv"
+ratings_filename = "ml-1m_{fold}_test.csv"
+items_filename = "movie_features_1m.csv"
+num_items = 2753
+coverage_target = 0.85
+list_low = 10
+list_high = 50
+metrics = ["ndcg","proportional_fairness"] # "rbo", "nlip", "coverage", 
+
+# History files are named "<data>_<agents>_<choice>_<allocation>_<weight>...".
+# recs/ratings/items filenames don't use these (no {placeholders} below), so
+# they're only used to tag columns in run_experiment.py's summary CSV.
+history_filename_fields = ["data", "fold", "model"]
+
+[[dataset.features]]
+name = "non-en"
+proportion_target = 0.07
+
+[[dataset.features]]
+name = "women_writer_director"
+proportion_target = 0.50

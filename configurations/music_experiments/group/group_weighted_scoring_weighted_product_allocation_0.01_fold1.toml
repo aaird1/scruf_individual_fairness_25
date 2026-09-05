@@ -1,0 +1,59 @@
+[location]
+path = "../../../post_processing/data/music/"
+overwrite = "true"
+
+[data]
+rec_filename = "ambar_fold1_BPR_test_recommendations.csv"
+feature_filename = "ambar_items.csv"
+
+[output]
+filename = "ambar_fold1_BPR_group.csv_weighted_scoring_weighted_product_allocation_0.01_fold1.json"
+dnc = "true"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 500
+
+[context]
+context_class = "csv_context"
+
+[choice]
+choice_class = "weighted_scoring"
+
+[post]
+postprocess_class = "null"
+
+[allocation]
+allocation_class = "weighted_product_allocation"
+
+[context.properties]
+compatibility_file = "ambar_compat_tail.csv"
+popularity_data = "popularity_ambar.csv"
+
+[choice.properties]
+recommender_weight = 0.01
+
+[feature.two]
+name = "female"
+protected_feature = "female"
+protected_values = [ 1,]
+
+[agent.two]
+name = "female"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[allocation.properties]
+compatibility_exponent = 2
+fairness_exponent = 1
+
+[agent.two.metric]
+feature = "female"
+proportion = 0.5
+
+[agent.two.preference]
+delta = 50
+feature = "female"

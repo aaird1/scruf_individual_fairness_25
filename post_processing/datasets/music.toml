@@ -1,0 +1,24 @@
+# Dataset definition for the music (Ambar) post-processing runs.
+# To add a new dataset, copy this file, point it at your own data files,
+# and list the protected features you want proportional fairness on.
+
+[dataset]
+name = "music"
+data_dir = "data/music"
+recs_filename = "ambar_{fold}_{model}_test_recommendations.csv"
+ratings_filename = "music_{fold}_test.csv"
+items_filename = "ambar_items.csv"
+num_items = 35093
+coverage_target = 0.65
+list_low = 10
+list_high = 50
+metrics = ["ndcg", "proportional_fairness"] # "rbo", "nlip", "coverage", 
+
+# History files are named "<data>_<agents>_<choice>_<allocation>_<weight>...".
+# recs/ratings/items filenames don't use these (no {placeholders} below), so
+# they're only used to tag columns in run_experiment.py's summary CSV.
+history_filename_fields = ["data", "fold", "model"]
+
+[[dataset.features]]
+name = "female"
+proportion_target = 0.35

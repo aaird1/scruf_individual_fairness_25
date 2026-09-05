@@ -1,0 +1,10 @@
+data,fold,model,extra,mean_ndcg,proportional_fairness_non-en,proportional_fairness_women_writer_director,mean_rbo,nlip,coverage
+ml-1m,fold1,BPR,group_weighted_scoring_product_lottery_0.1_fold1,0.06567995024383999,0.640018921475875,0.9990397350993377,,,
+ml-1m,fold1,BPR,group_weighted_scoring_weighted_product_allocation_0.1_fold1,0.065485893691619,0.6371807000946074,0.999271523178808,,,
+ml-1m,fold1,BPR,ind_weighted_scoring_product_lottery_0.1_fold1,0.0691733444930627,0.4427625354777672,0.7217549668874172,,,
+ml-1m,fold1,BPR,ind_weighted_scoring_weighted_product_allocation_0.1_fold1,0.06994343447129428,0.4510406811731314,0.7187086092715231,,,
+ml-1m,fold1,MultiVAE,group_weighted_scoring_product_lottery_0.1_fold1,0.0662091618910257,0.5562913907284768,0.9998675496688741,,,
+ml-1m,fold1,MultiVAE,group_weighted_scoring_weighted_product_allocation_0.1_fold1,0.06587753052446108,0.5610217596972564,1.0000331125827815,,,
+ml-1m,fold1,MultiVAE,ind_weighted_scoring_product_lottery_0.1_fold1,0.069541874532113,0.3883632923368022,0.739569536423841,,,
+ml-1m,fold1,MultiVAE,ind_weighted_scoring_weighted_product_allocation_0.1_fold1,0.06992735326061174,0.39593188268684953,0.7660596026490066,,,
+movie,baseline,bpr,,0.3531217432929152,0.38457899716177857,0.7186534216335542,0.16112892226426995,0.5649710264900661,0.684173415097968

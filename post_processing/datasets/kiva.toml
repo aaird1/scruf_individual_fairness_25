@@ -1,0 +1,46 @@
+# Dataset definition for kiva.
+#
+# History files are named "<data>_<fold>_<model>_...", e.g.
+# "kiva_fold1_BPR_static.parquet" -> data=kiva, fold=fold1, model=BPR.
+# recs_filename/ratings_filename below use those parsed fields to pick a
+# different recs/ratings file per history file:
+#   recs:    kiva_fold1_BPR_test_recommendations.csv
+#   ratings: kiva_fold1_test.csv
+
+
+[dataset]
+name = "kiva"
+# Point this at wherever the kiva data actually lives. Relative paths are
+# resolved from post_processing/; use an absolute path (e.g.
+# "/path/to/SCRUF_FULL/post_processing_new/data/kiva") if it's outside this
+# repo.
+data_dir = "data/kiva"
+recs_filename = "{data}_{fold}_{model}_test_recommendations.csv"
+ratings_filename = "{data}_{fold}_test.csv"
+items_filename = "loans.csv" 
+
+history_filename_fields = ["data", "fold", "model"]
+
+# TODO: set these to kiva's real values.
+num_items = 0
+coverage_target = 0.0
+
+list_low = 10
+list_high = 50
+metrics = ["ndcg", "proportional_fairness"] # "rbo", "nlip", "coverage"
+
+# Set to true for any of these that have a header row (column names in the
+# header are ignored -- only column order matters: user id, item id, then
+# score/rating/feature value).
+recs_has_header = false
+ratings_has_header = false
+items_has_header = false
+
+
+[[dataset.features]]
+name = "agriculture"
+proportion_target = 1
+
+[[dataset.features]]
+name = "high"
+proportion_target = 1

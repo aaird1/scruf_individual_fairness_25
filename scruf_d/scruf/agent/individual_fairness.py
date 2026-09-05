@@ -3,6 +3,7 @@ from abc import abstractmethod, ABC
 import numpy as np
 from statistics import mean
 import scruf
+from joblib import Parallel, delayed
 
 
 class IndividualFairnessMetric(FairnessMetric):
@@ -55,7 +56,7 @@ class GiniIndexFM(IndividualFairnessMetric):
                 else:
                     counts_dict[recommendation.item] = 1
         non_zero_counts = np.array(list(counts_dict.values()))
-        coverage = len(non_zero_counts)/2000
+        coverage = len(non_zero_counts)/n
         # zero_count = n - len(non_zero_counts)
         #
         # total_sum = non_zero_counts.sum()

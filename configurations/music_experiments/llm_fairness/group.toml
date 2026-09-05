@@ -1,0 +1,66 @@
+[location]
+path = "../../../post_processing/data/music/"
+overwrite = "true"
+
+[data]
+rec_filename = "ambar_fold1_BPR_test_recommendations.csv"
+feature_filename = "ambar_items.csv"
+
+[output]
+filename = "ambar_fold1_BPR_LLMall.csv"
+dnc = "true"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 500
+
+[context]
+context_class = "csv_context"
+
+[choice]
+choice_class = "weighted_scoring"
+
+[post]
+postprocess_class = "null"
+
+[context.properties]
+compatibility_file = "ambar_llm_compat.csv"
+popularity_data = "popularity_ambar.csv"
+
+[feature.one]
+name = "llm_individual"
+protected_feature = "consumer_individual"
+protected_values = [ 1,]
+
+
+[agent.one]
+name = "llm_individual"
+metric_class = "llm_fairness"
+compatibility_class = "context_compatibility"
+preference_function_class = "llm_preference"
+
+
+
+[allocation]
+allocation_class = "static_lottery"
+
+[allocation.properties]
+weights  = [["llm_individual", "1.0"]]
+
+[choice.properties]
+recommender_weight = 0.0
+#whalrus_rule = "RuleBorda"
+#tie_breaker = "Random"
+#ignore_weights = "false"
+
+
+
+[agent.one.metric]
+prompt = "rank individual fairness based on how likely this user is to have good recommendations compared to how likely other users have had good recommendations. The better this users recommendations are, the higher the afirness score should be. Combine this score with how fair the represenation is for songs with femal artists"
+model = "gpt-4.1-mini"
+[agent.one.preference]
+prompt = "boost scores for items you think this user is most likely to like and for items with female artists"
+model = "gpt-4.1-mini"
+

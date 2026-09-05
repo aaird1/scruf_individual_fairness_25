@@ -1,0 +1,7 @@
+config:
+  choice: ['weighted_scoring'] #'weighted_scoring'
+  allocation: ['weighted_product_allocation', 'product_lottery'] #, 'product_lottery', 'weighted_product_allocation'
+  rec_weight: [0.1]
+  folder_path: "./" 
+  base_toml: "VAE.toml" 
+  fold: [1]

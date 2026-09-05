@@ -3,11 +3,11 @@ path = "../../../post_processing/data/movies/"
 overwrite = "true"
 
 [data]
-rec_filename = "recs_1m.csv"
+rec_filename = "ml-1m_fold1_BPR_test_recommendations.csv"
 feature_filename = "items.csv"
 
 [output]
-filename = "movie_group"
+filename = "ml-1m_fold1_BPR_group"
 dnc = "true"
 
 [parameters]
@@ -26,7 +26,7 @@ choice_class = "weighted_scoring"
 postprocess_class = "null"
 
 [context.properties]
-compatibility_file = "compat_1m_tail.csv"
+compatibility_file = "movies_individual_compat_80.csv"
 popularity_data = "popularity_1m.csv"
 
 #[feature.one]
@@ -90,7 +90,7 @@ feature = "non-en"
 
 [agent.three.metric]
 feature = "women_writer_director"
-proportion = 0.30
+proportion = 0.50
 
 [agent.three.preference]
 delta = 0.5

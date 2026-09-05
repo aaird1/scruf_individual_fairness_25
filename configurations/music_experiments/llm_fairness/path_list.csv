@@ -1,0 +1,2 @@
+,Config Number,Config Path,Output Path,recommender_weight,fold
+0,1,.//group_weighted_scoring_product_lottery_0.2_fold1.toml,ambar_fold1_BPR_LLM.csv_weighted_scoring_product_lottery_0.2_fold1.json,0.2,1

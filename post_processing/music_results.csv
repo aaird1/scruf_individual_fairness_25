@@ -1,0 +1,4 @@
+data,fold,model,extra,mean_ndcg,proportional_fairness_female
+ambar,fold1,BPR,baseline,0.24713081719057187,0.6150952380952381
+ambar,fold1,BPR,group.csv_weighted_scoring_least_fair_0.2_fold1,0.2095289138962147,1.061904761904762
+ambar,fold1,BPR,group.csv_weighted_scoring_product_lottery_0.2_fold1,0.21636317848291378,1.0157142857142858

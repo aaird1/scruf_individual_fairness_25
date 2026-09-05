@@ -1,0 +1,79 @@
+[location]
+path = "../../../post_processing/data/kiva/"
+overwrite = "true"
+
+[data]
+rec_filename = "kiva_fold1_BPR_test_recommendations.csv"
+feature_filename = "loans.csv"
+
+[output]
+filename = "kiva_fold1_BPR_RuleCopeland_product_lottery_0.5_fold1.json"
+dnc = "true"
+
+[parameters]
+list_size = 10
+iterations = -1
+initialize = "skip"
+history_window_size = 800
+
+[context]
+context_class = "csv_context"
+
+[choice]
+choice_class = "whalrus_scoring"
+
+[post]
+postprocess_class = "null"
+
+[allocation]
+allocation_class = "product_lottery"
+
+[context.properties]
+compatibility_file = "compat_kiva.csv"
+popularity_data = "popularity_kiva.csv"
+
+[choice.properties]
+recommender_weight = 0.5
+whalrus_rule = "RuleCopeland"
+tie_breaker = "Random"
+ignore_weights = "false"
+
+[feature.one]
+name = "high"
+protected_feature = "high"
+protected_values = [ 1,]
+
+[feature.two]
+name = "agriculture"
+protected_feature = "agriculture"
+protected_values = [ 1,]
+
+[agent.one]
+name = "high"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[agent.two]
+name = "agriculture"
+metric_class = "proportional_item"
+compatibility_class = "context_compatibility"
+preference_function_class = "cascade_preference"
+
+[allocation.properties]
+
+[agent.one.metric]
+feature = "high"
+proportion = 0.3
+
+[agent.one.preference]
+delta = 0.5
+feature = "high"
+
+[agent.two.metric]
+feature = "agriculture"
+proportion = 0.3
+
+[agent.two.preference]
+delta = 0.5
+feature = "agriculture"

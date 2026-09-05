@@ -1,3 +1,3 @@
-Config Number,Config Path,Output Path,Recommender Weight,Agent Deltas
-1,.//movie_group_Rescore_Product_0.01_.toml,movie_group_Rescore_Product_0.01_.json,0.01,{}
-2,.//movie_group_Rescore_Product_0.2_.toml,movie_group_Rescore_Product_0.2_.json,0.2,{}
+,Config Number,Config Path,Output Path,recommender_weight,fold
+0,1,.//movie_group_weighted_scoring_weighted_product_allocation_0.1_fold1.toml,ml-1m_fold1_BPR_group_weighted_scoring_weighted_product_allocation_0.1_fold1.json,0.1,1
+1,2,.//movie_group_weighted_scoring_product_lottery_0.1_fold1.toml,ml-1m_fold1_BPR_group_weighted_scoring_product_lottery_0.1_fold1.json,0.1,1
