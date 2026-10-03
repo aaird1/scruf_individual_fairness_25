@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scruf-d"
+version = "0.1.0"
+description = "Social Choice for Recommendation Under Fairness - Dynamic"
+requires-python = ">=3.10"
+dependencies = [
+    "icecream>=2.1",
+    "joblib>=1.3",
+    "jsonlines>=4.0",
+    "jsons>=1.6",
+    "numpy>=1.26",
+    "openai>=1.0",
+    "pandas>=2.0",
+    "pyarrow>=14.0",
+    "rbo>=0.1.3",
+    "ruamel.yaml>=0.17",
+    "toml>=0.10",
+    "tqdm>=4.65",
+    "whalrus>=0.4.6",
+]
+
+[tool.setuptools]
+package-dir = {"" = "scruf_d"}
+
+[tool.setuptools.packages.find]
+where = ["scruf_d"]
+include = ["scruf*"]
