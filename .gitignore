@@ -1,3 +1,5 @@
 venv
 .venv*/
 notes_pipeline.md
+__pycache__/
+*.pyc
