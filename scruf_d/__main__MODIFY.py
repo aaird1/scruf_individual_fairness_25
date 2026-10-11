@@ -4,7 +4,7 @@ import os
 import toml
 from scruf.util.errors import ConfigFileError
 from scruf import Scruf
-from _toml_gen import path_list
+from _toml_gen import path_list, folder_path
 import pathlib
 
 def read_args():
@@ -44,6 +44,14 @@ for config_path in config_paths:
     scruf = Scruf(config)
     scruf.run_experiment()
     print("Finished: "+str(counter)+"/"+str(total))
+
+from ruamel.yaml import YAML
+from datetime import datetime
+_y = YAML(typ="safe")
+_info = _y.load(open(f"{folder_path}/run_info.yaml"))
+_info["status"] = "completed"
+_info["finished"] = datetime.now().isoformat(timespec="seconds")
+_y.dump(_info, open(f"{folder_path}/run_info.yaml", "w"))
 
 #os.remove("fair1.toml")
 #os.remove("fair2.toml")

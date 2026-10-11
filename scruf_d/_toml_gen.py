@@ -3,12 +3,31 @@ import numpy as np
 import pandas as pd
 import pathlib
 from ruamel.yaml import YAML
+from datetime import datetime
+import subprocess, sys, platform
 
 yaml = YAML(typ="safe")
 params = yaml.load(open("params.yaml", encoding="utf-8")) #change here for new params files
 
-folder_path = params["config"]["folder_path"]
+results_root = params["config"].get("results_root", "../../../results")
+run_stamp = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+folder_path = f"{results_root}/{run_stamp}"
+pathlib.Path(folder_path).mkdir(parents=True, exist_ok=False)
+def _sh(cmd):
+    return subprocess.run(cmd, shell=True, capture_output=True, text=True).stdout.strip()
 
+run_info = {
+    "status": "running",
+    "started": datetime.now().isoformat(timespec="seconds"),
+    "git_sha": _sh("git rev-parse HEAD"),
+    "git_dirty": _sh("git status --porcelain") != "",
+    "python": sys.version.split()[0],
+    "platform": platform.platform(),
+    "packages": _sh(f"{sys.executable} -m pip freeze"),
+}
+with open(f"{folder_path}/run_info.yaml", "w") as f:
+    yaml.dump(run_info, f)
+    
 base_toml = params["config"]["base_toml"]
 def remove_suffix(input_string, suffix):
     if suffix and input_string.endswith(suffix):
@@ -17,6 +36,7 @@ def remove_suffix(input_string, suffix):
 
 def generate_config(base, config_number, rec_weight, choice, allocation, filename_suffix, fold):
     base_toml = toml.load(base)
+    base_toml["location"]["output_path"] = folder_path
     new_filename = remove_suffix(base_toml["output"]["filename"], ".json") + f"_{filename_suffix}_{rec_weight}_fold{fold}.json"
     #csv_filename = remove_suffix(base_toml["post"]["properties"]["summary_filename"], ".csv") + f"_{filename_suffix}.csv"
     base_toml["output"]["filename"] = new_filename

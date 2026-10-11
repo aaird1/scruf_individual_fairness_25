@@ -42,7 +42,9 @@ class ScrufHistory:
     def setup(self, config):
         ScrufHistory.check_config(config)
 
-        self.working_dir = get_working_dir_path(config)
+        output_dir = get_value_from_keys(["location", "output_path"], config, default="")
+        self.working_dir = pathlib.Path(output_dir).absolute() if output_dir else get_working_dir_path(config)
+
         self.history_file_name = get_value_from_keys(
             ConfigKeys.OUTPUT_PATH_KEYS, config
         )

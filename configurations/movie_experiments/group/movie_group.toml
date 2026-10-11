@@ -1,5 +1,6 @@
 [location]
 path = "../../../post_processing/data/movies/"
+output_path = "../../../results/"
 overwrite = "true"
 
 [data]
@@ -12,7 +13,7 @@ dnc = "true"
 
 [parameters]
 list_size = 10
-iterations = -1
+iterations = 200
 initialize = "skip"
 history_window_size = 200
 
