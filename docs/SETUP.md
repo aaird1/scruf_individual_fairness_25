@@ -114,3 +114,10 @@ and does not load on Apple Silicon, which is why the Python path is used by defa
 
 `post_processing/data/` holds input files and also older result files from earlier work.
 It is not a clean inputs-only directory.
+
+The `*_recommendations.csv` input files are outputs of recommender models (BPR, DMF,
+MultiVAE), not raw datasets. No model-training code is included in this repository, so
+these files cannot be regenerated here — they can only be used as committed. This means
+anyone reproducing this work uses the same recommendation lists that produced the
+original results, but cannot verify how those lists were generated or produce new ones
+for a different dataset or model.
