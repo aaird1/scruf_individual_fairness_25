@@ -49,9 +49,14 @@ from ruamel.yaml import YAML
 from datetime import datetime
 _y = YAML(typ="safe")
 _info = _y.load(open(f"{folder_path}/run_info.yaml"))
+_started = _info["started"]
+_started = datetime.fromisoformat(_started) if isinstance(_started, str) else _started
+_finished = datetime.now()
 _info["status"] = "completed"
-_info["finished"] = datetime.now().isoformat(timespec="seconds")
+_info["finished"] = _finished.isoformat(timespec="seconds")
+_info["duration_seconds"] = round((_finished - _started).total_seconds(), 1)
 _y.dump(_info, open(f"{folder_path}/run_info.yaml", "w"))
+
 
 #os.remove("fair1.toml")
 #os.remove("fair2.toml")
