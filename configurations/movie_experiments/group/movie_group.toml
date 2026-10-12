@@ -13,7 +13,7 @@ dnc = "true"
 
 [parameters]
 list_size = 10
-iterations = 200
+iterations = -1
 initialize = "skip"
 history_window_size = 200
 
