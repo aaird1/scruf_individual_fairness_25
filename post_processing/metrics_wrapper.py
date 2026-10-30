@@ -47,7 +47,7 @@ def _gini_wrapper_c(out_lists):
     return _lib.giniWrapper(c_targets, c_out_lists, target_size, out_size)
 
 
-def _ndcg_wrapper_c(items, scores, rec, sorted):
+def _ndcg_wrapper_c(items, scores, rec, is_sorted):
     code = {}
     i = 0
     for item in items:
@@ -67,7 +67,7 @@ def _ndcg_wrapper_c(items, scores, rec, sorted):
     c_rec = (ctypes.c_uint * rec_size)(*new_rec)
     c_base_logs = (ctypes.c_float * rec_size)(*base_logs)
 
-    sorted_flag = 1 if sorted else -1
+    sorted_flag = 1 if is_sorted else -1
 
     return _lib.ndcgWrapper(c_scores, c_rec, score_size, c_base_logs, sorted_flag)
 
@@ -92,7 +92,7 @@ def _gini_wrapper_python(out_lists):
     return (1.0 / size) * (size + 1.0 - 2.0 * (num / denom))
 
 
-def _ndcg_wrapper_python(items, scores, rec, sorted):
+def _ndcg_wrapper_python(items, scores, rec, is_sorted):
     """Equivalent to metrics.c's ndcg()/ndcgWrapper(): DCG/IDCG over the
     first REC_LIST_SIZE recommended items, using `scores` (aligned with
     `items`) as relevance."""
@@ -117,7 +117,7 @@ def _ndcg_wrapper_python(items, scores, rec, sorted):
             rel[i] = 1
     dcg = float(np.sum(rel / base_logs))
 
-    ideal_scores = list(scores) if sorted else sorted(scores, reverse=True)
+    ideal_scores = list(scores) if is_sorted else sorted(scores, reverse=True)
     ideal_rel = np.zeros(REC_LIST_SIZE)
     for i in range(min(REC_LIST_SIZE, len(ideal_scores))):
         if ideal_scores[i] > EPSILON:

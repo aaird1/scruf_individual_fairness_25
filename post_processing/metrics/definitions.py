@@ -20,7 +20,7 @@ from .registry import metric
 @metric("ndcg")
 def ndcg(ctx: RunContext) -> dict:
     scores = [
-        mw.ndcg_wrapper(u.obs_ids, u.obs_scores, u.recommender_ids, sorted=ctx.dataset.score_sort)
+        mw.ndcg_wrapper(u.obs_ids, u.obs_scores, u.recommender_ids, is_sorted=ctx.dataset.score_sort)
         for u in ctx.users
     ]
     return {
